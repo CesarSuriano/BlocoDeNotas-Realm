@@ -13,7 +13,6 @@ import io.realm.Sort;
 public class MainActivity extends AppCompatActivity implements RecyclerItemClickListener{
 
     private RecyclerView lvNote;
-    private Button btnAdd;
 
     private NoteListAdapter noteListAdapter;
     private LinearLayoutManager linearLayoutManager;
@@ -24,7 +23,6 @@ public class MainActivity extends AppCompatActivity implements RecyclerItemClick
         setContentView(R.layout.activity_main);
 
         lvNote = (RecyclerView) findViewById(R.id.lvNote);
-        btnAdd = (Button) findViewById(R.id.btnAdd);
 
         noteListAdapter = new NoteListAdapter(this);
         linearLayoutManager = new LinearLayoutManager(this);
@@ -33,12 +31,6 @@ public class MainActivity extends AppCompatActivity implements RecyclerItemClick
         lvNote.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         lvNote.setAdapter(noteListAdapter);
 
-        btnAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                SaveActivity.start(MainActivity.this, 0);
-            }
-        });
     }
 
     @Override
@@ -67,5 +59,9 @@ public class MainActivity extends AppCompatActivity implements RecyclerItemClick
     public void onBackPressed() {
         super.onBackPressed();
         finish();
+    }
+
+    public void fabClick(View view) {
+        SaveActivity.start(MainActivity.this, 0);
     }
 }
