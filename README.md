@@ -1,4 +1,4 @@
 # BlocoDeNotas-Realm
 
 
-![alt tag](https://github.com/CesarSuriano/BlocoDeNotas-Realm/master/path/to/realm.png)
+![alt tag](https://github.com/CesarSuriano/BlocoDeNotas-Realm/blob/master/realm.png)
